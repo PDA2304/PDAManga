@@ -4,7 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PDAManga</title>
-    
+    <!--
+        Подлючение CSS файл к проекту    
+    -->
+    <link href="~/css/css.css" rel="stylesheet" />
+    <!--
+        Подключение шрифта в проект
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -14,7 +23,7 @@
       @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer >
     </footer>
 </body>
 </html>
