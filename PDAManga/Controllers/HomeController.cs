@@ -17,8 +17,15 @@ namespace PDAManga.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+
+        public IActionResult CardMang()
         {
+            return View();
+        }
+
+        public IActionResult Sign()
+        {
+            ViewData.Model = Convert.ToString(Request.Query["area"]);
             return View();
         }
 

@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Вход";
+}
+
+<style>
+    .tabs {
+        max-width: 610px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 24px;
+    }
+
+        .tabs > input[type="radio"] {
+            display: none;
+        }
+
+        .tabs > div {
+            /* СОДЕРЖИМОЕ контента*/
+            display: none;
+            border-radius: 0 15px 15px 15px;
+            background-color: #C4C4C4;
+            padding: 35px 87.5px;
+        }
+    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+
+    #tab-btn-1:checked ~ #content-1,
+    #tab-btn-2:checked ~ #content-2 {
+        display: block;
+    }
+
+    .tabs > label {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        width: 250px;
+        height: 40px;
+        background-color: #E1E1E1;
+        border-radius: 15px 15px 0 0;
+        margin-right: 20px;
+        padding: 5px 8px;
+        cursor: pointer;
+    }
+
+    .tabs > input[type="radio"]:checked + label {
+        background-color: #C4C4C4;
+    }
+
+    label {
+        padding-left: 10px;
+    }
+
+    input {
+        margin-bottom: 10px;
+        outline: none;
+        padding-left: 10px;
+        border: none;
+        border-radius: 15px;
+        width: 435px;
+        height: 35px;
+    }
+
+    button {
+        width: 435px;
+        height: 35px;
+        border: none;
+        border-radius: 15px;
+        background-color: #3CCE7B;
+        font-size: 18px;
+        color: white;
+        margin-top: 20px;
+    }
+</style>
+<div style="width:1316px;">
+    <div class="tabs">
+        @{
+            if (Model == "content-2")
+            {
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="">
+                <label for="tab-btn-1"> Авторизация </label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="" checked>
+                <label for="tab-btn-2"> Регистрация </label>
+            }
+            if(Model == "content-1")
+            {
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                <label for="tab-btn-1"> Авторизация </label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                <label for="tab-btn-2"> Регистрация </label>
+            }
+        }
+        <div id="content-1">
+            <form class="form">
+                <label for="login"> Логин </label> <br>
+                <input name="login" required type="text"> <br>
+                <label for="password"> Пароль </label> <br>
+                <input name="password" required type="password"> <br>
+                <button type="submit"> Вход в систему </button> <br>
+            </form>
+        </div>
+
+
+        <div id="content-2">
+            <form class="form">
+                <label for="nickname"> Никнейм </label> <br>
+                <input name="nickname" required type="text"> <br>
+                <label for="login"> Логин </label> <br>
+                <input name="login" required type="text"> <br>
+                <label for="email"> Почта </label> <br>
+                <input name="email" required type="email"> <br>
+                <label for="password"> Пароль </label> <br>
+                <input name="password" required type="password"> <br>
+                <label for="confirm"> Подтверждение пароля </label> <br>
+                <input name="confirm" required type="password"> <br>
+                <button type="submit"> Вход в систему </button> <br>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

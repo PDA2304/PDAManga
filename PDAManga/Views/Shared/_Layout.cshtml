@@ -15,27 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
 <body>
-   
-    @*<div class="search hidden">
-        <div class="search__container">
-            <div class="search__inner autocomplete">
-                <div class="search__input-wrap">
-                    <div class="search__icon search__icon_left">
-                        <img src="~/img/лупа - черная.png"  class="fa fa-search" />
-                    </div>
-                    <input type="text" class="search__input form__input autocomplete__input" placeholder="Поиск Манги">
-                    <div class="search__icon search__icon_right search__icon_close" data-search-toggle="">
-                        <svg><img src="~/img/close.png"/></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>*@
-
     <header>
         <nav>
-            <div class="content">
-                <a asp-area="" asp-controller="Home" asp-action="Index">
+            <div class="content-header">
+                <a asp-area="" asp-controller="Home" asp-action="Index" style="text-decoration: none">
                     <img src="~/img/logo.png" class="logo" />
                 </a>
 
@@ -47,10 +30,10 @@
                     </ul>
                 </div>
                 <div class="authorization">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <a asp-area="content-1" asp-controller="Home" asp-action="Sign">
                         <p>Вход</p>
                     </a>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <a asp-area="content-2" asp-controller="Home" asp-action="Sign">
                         <p style="border: 1px solid white; border-radius: 10px; padding: 3px 10px;">Регистрация</p>
                     </a>
                 </div>

@@ -1,8 +1,5 @@
 ﻿body {
     margin: 0;
-    overflow: hidden;
-    padding-right: 12px;
-    overscroll-behavior: none;
 }
 
 html a {
@@ -19,6 +16,10 @@ html {
 
 @media (min-width: 1200px) {
     .content {
+        max-width:1316px;
+    }
+
+    .content-header {
         max-width: 1316px;
     }
 
@@ -38,16 +39,17 @@ header {
     top: 0;
 }
     /* Стиль для основного div который используется в области header*/
-    header .content {
-        width: 100%;
-        height: 45px;
-        padding: 10px 0px;
-        margin-right: 110px;
-        margin-left: 110px;
-        display: inline-flex;
-        align-items: center;
-        margin-top: 0px;
-    }
+.content-header {
+    width: 100%;
+    height: 45px;
+    padding: 10px 0px;
+    margin-right: 110px;
+    margin-left: 110px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0px;
+   
+}
     /* Стиль для p который находиться области header*/
     header p {
         margin: 0px 5px;
@@ -86,110 +88,12 @@ li {
 
 /* Стиль для основного div*/
 .content {
-    margin-top: 65px;
+    margin-top: 95px;
     margin-right: 110px;
     margin-left: 110px;
+    display: inline-flex;
 }
 
 
-/*
-.search {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1400;
-    background: rgba(0,0,0,.6);
-    -webkit-animation: fade .2s ease;
-    animation: fade .2s ease;
-}
 
-.search__container {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 80px;
-}
-.search__inner {
-    min-height: 100vh;
-    padding-top: 9px;
-}
-.autocomplete, .autocomplete_drop {
-    position: relative;
-}
 
-.search__input-wrap {
-    position: relative;
-}
-
-.search__icon_left {
-    left: 0;
-    font-size: 18px;
-    padding: 10px;
-}
-
-.search__icon {
-    position: absolute;
-    top: 0;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-    color: #212529;
-}
-
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.search__icon_left i.fa {
-    display: block;
-}
-
-.search__input {
-    height: 38px;
-    border: 0;
-    background: #fff;
-    color: #212529;
-    padding-left: 38px;
-    padding-right: 38px;
-    border-radius: 3px;
-}
-.form__input {
-    padding: 5px 12px;
-    width: 100%;
-    height: 32px;
-}
-
-.form__input, .form__textarea {
-    margin: 0;
-    font-size: 14px;
-    font-family: inherit;
-    line-height: 20px;
-    border-radius: 3px;
-    color: #212529;
-    color: var(--text-primary);
-    border: 1px solid #dcdcdc;
-    border: solid 1px var(--input-border);
-    max-width: 100%;
-}
-
-button, input {
-    overflow: visible;
-}
-
-.search__icon_right {
-    right: 0;
-    padding: 11px;
-}
-
-    .search__icon_right svg {
-        width: 16px;
-        height: 16px;
-        stroke: #000;
-        stroke-linecap: round;
-    }*/

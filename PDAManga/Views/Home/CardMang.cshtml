@@ -1,0 +1,298 @@
+﻿@{
+    ViewData["Title"] = "Карточка манги";
+}
+
+<style>
+    .tabs {
+        font-size: 0;
+    }
+
+        .tabs > input[type="radio"] {
+            display: none;
+        }
+
+        .tabs > div {
+            /* скрыть контент по умолчанию */
+            display: none;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #C4C4C4;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+    #tab-btn-1:checked ~ #content-1,
+    #tab-btn-2:checked ~ #content-2,
+    #tab-btn-3:checked ~ #content-3 {
+        display: block;
+    }
+
+    .tabs > label {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        background-color: #EAE8E8;
+        padding: 2px 8px;
+        font-size: 16px;
+        line-height: 1.5;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+        .tabs > label:not(:first-of-type) {
+            border-left: none;
+        }
+
+    .tabs > input[type="radio"]:checked + label {
+        background-color: #C4C4C4;
+    }
+
+
+    .d7:after {
+        content: "";
+        clear: both;
+        display: table
+    }
+
+    .d7 form {
+        margin-bottom: 5px;
+        width: auto;
+        margin-right: 30px;
+    }
+
+    .d7 input {
+        width: 350px;
+        height: 32px;
+        padding-left: 15px;
+        border-radius: 42px;
+        border: none;
+        outline: none;
+        position: relative;
+        transition: .3s linear;
+    }
+
+    .d7 button {
+        width: 42px;
+        height: 42px;
+        background: none;
+        border: none;
+    }
+
+        .d7 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            color: #324b4e;
+        }
+
+    .space {
+        margin-bottom:5px;
+        background-color:white ;
+        padding:5px;
+        border-radius:15px;
+        display: flex;
+        width: 610px;
+        justify-content: space-between;
+    }
+</style>
+<div style="display: flex">
+    <div>
+        <img src="~/img/Клинок рассекающий демонов.png" width="210" style="border-radius:10px" />
+        <div style="background:#FF9417;   padding:5px; border-radius:10px; margin-bottom:10px; margin-top:10px">
+            <p style="text-align: center; color:white">Читать онлайн</p>
+        </div>
+        <div style="background: #C4C4C4; border-radius:10px;padding:10px">
+
+            <p style=" color:black">Тип</p>
+
+            <div style="background:white;   padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">Манхва</p>
+            </div>
+
+            <p style=" color:black">Формат выпуска</p>
+
+            <div style="background:white;   padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">В цвете Веб</p>
+            </div>
+
+            <p style="color:black">Год резила</p>
+
+            <div style="background:white; padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">2018</p>
+            </div>
+
+            <p style="color:black">Статус перевода</p>
+
+            <div style="background:white; padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">Продолжается</p>
+            </div>
+
+            <p style="color:black">Автор</p>
+
+            <div style="background:white; padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">GEE So-Lyung</p>
+            </div>
+
+            <p style="color:black">Загружено глав</p>
+
+            <div style="background:white; padding:5px; border-radius:10px">
+                <p style="text-align: center; color:black">143</p>
+            </div>
+        </div>
+    </div>
+    <div style=" margin-left:10px">
+
+        <p>Клинок рассекающий демонов</p>
+
+        <div class="tabs">
+            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+            <label for="tab-btn-1"> Информация</label>
+            <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+            <label for="tab-btn-2">Главы</label>
+
+
+            <div id="content-1">
+                <div style="display:flex">
+
+                    <div style="width:100%">
+                        <p style="text-align:match-parent">10 лет назад, после того, как «Врата», соединившие реальный мир с параллельным, открылись, некоторые из людей получили силу охотиться на монстров внутри «Врат». Они известны как охотники. Однако не все охотники сильные. Меня зовут Сон Джин Ву — охотник E-ранга. Я тот, кто рискует своей жизнью в самых низких уровнях подземелья. Не имея никаких сверхсильных навыков, я едва зарабатывал необходимые деньги, сражаясь в низкоуровневых подземельях... по крайней мере, пока я не нашел скрытое подземелье с самыми трудными проблемами в подземельях D-ранга! В конце концов, когда я умер, я внезапно получил странную силу, журнал заданий, который мог видеть только я, секрет для поднятия уровня, о котором знаю только я! Если я тренировался в соответствии с моими заданиями и охотился на монстров, мой уровень повышался. Переход от самого слабого охотника к самому сильному, охотнику S-ранга!</p>
+                    </div>
+
+
+                    <div style="width:400px">
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div id="content-2">
+                <div class="d7">
+                    <form>
+                        <input type="text" placeholder="Искать здесь...">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+                <div class="space">
+                    <div> Том 2, Глава 5 </div>
+                    <div> 23.04.2020</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
